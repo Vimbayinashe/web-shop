@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+h1,
+p {
+    margin: 0.6em 2em;
+    font-size: 4em;
+    font-family: cursive, Georgia, serif;
+    color: darkred;
+}
+
+p {
+    font-size: 2.5em;
+    margin: 1.5em 2em 0 3em;
+}
+
+#pattern {
+    background-image: url("pictures/pralines.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 9em;
+    width: 100em;
+}
+
+main {
+    margin: 0 3em;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 20em;
+    height: 100%;
+}
+
+
+#shop {
+    margin: 2em;
+    padding: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75em;
+}
+
+.products {
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(233, 159, 197, 0.705);
+    width: 30em;
+    overflow: auto;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.pdt {
+    width: 30em;
+    height: 30em;
+}
+
+.pictures~div {
+    margin: 0.75em 1em;
+}
+
+#btn, .add {
+    width: 9em;
+    height: 3em;
+}
+
+#btn {
+    background-color: rgba(218, 21, 122, 0.705) ;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#cart {
+    width: 25em;
+    height: auto;
+    background-color: white;
+    padding: 0.5em;
+    border: 0.1em solid rgb(114, 105, 105);
+}
+
+.temp {
+    float: left;
+    margin-right: 3em;
+}
+
+.hidden {
+    display: none;
+}
+
+.close>img {
+    width: 3rem;
+    height: auto;
+    float: left;
+}
+
+
+.close {
+    width: 3rem;
+    height: auto;
+    overflow: auto; /* allows the img to sit IN the div instead of under */
+    float: left;
+}
+
+#empty {
+    width: 3rem;
+    height: 2rem;
+    float: right;
+}
+
+#cart-contents {
+    clear: both;
+}
+
+#cart-display {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: row;
+    margin: 0.2em;
+}
+
+.basket-item > div {
+    margin: 0.2em;
+}
+
+.cart-total {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.amounts {
+    display: flex;
+    flex-direction: row;
+    width: 9em;
+    height: 3em;
+    margin: 0 0.5em;
+}
+
+.add-basket {
+    display: flex;
+    flex-direction: row;
+    clear: both;
+}
+
+.increase, .decrease {
+    width: 4em;
+    height: 2em;
+    background-color: white;
+    border: none;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input {
+    width: 4em;
+    height: 40px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 50px;
+}
+
+#contact-details {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact {
+    margin-left: 5em;
+    font-size: 120%;
+}
+
+footer {
+    margin: 2em 7em;
+    border: 0.1em solid darkred;
+    background-color: rgba(247, 220, 234, 0.678);
+    width: 65em;
+}
+
+footer div {
+    margin: 0.5em 1.5em;
+
+}
+
+@media screen and (max-width:540px) {
+    * {
+        margin: 1em;
+    }
+
+    .products {
+        width: 25em;
+        margin: 1em
+    }
+    
+    .pdt {
+        width: 25em;
+        height: 25em;
+    }
+}
+
+@media (max-width:1200px) {
+    #contact-details {
+        flex-direction: column;
+    }
+
+    #shop {
+        display: block;
+    }
+
+    footer {
+        width: 30em;
+    }
+
+    #cart {
+        width: 18em;
+    }
+}
